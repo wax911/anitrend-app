@@ -1,15 +1,7 @@
 package com.mxt.anitrend.buildsrc.common
 
 object Versions {
-    const val mockk = "1.11.0"
-    const val junit = "4.13.2"
-
-    const val timber = "4.7.1"
-    const val treesSence = "1.0.4"
-
     const val prettyTime = "4.0.4.Final"
-
-    const val betterLinkMovement = "2.2.0"
 
     const val butterKnife = "10.2.3"
     const val multidex = "2.0.1"
@@ -26,6 +18,5 @@ object Versions {
     const val alerter = "7.0.1"
     const val stream = "1.2.2"
     const val circularProgressView = "2.5.0"
-    const val hamcrest = "2.2"
     const val txtmark = "0.16"
 }

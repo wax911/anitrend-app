@@ -12,13 +12,13 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath(com.mxt.anitrend.buildsrc.Libraries.Android.Tools.buildGradle)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.JetBrains.Kotlin.Gradle.plugin)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.JetBrains.Kotlin.Serialization.serialization)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.Koin.Gradle.plugin)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.Google.Services.googleServices)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.Google.Firebase.Crashlytics.Gradle.plugin)
-        classpath(com.mxt.anitrend.buildsrc.Libraries.ObjectBox.Gradle.plugin)
+        classpath(libs.android.gradle.plugin)
+        classpath(libs.jetbrains.kotlin.gradle)
+        classpath(libs.jetbrains.kotlin.serialization)
+        classpath(libs.koin.gradle.plugin)
+        classpath(libs.google.gsm.google.services)
+        classpath(libs.google.firebase.crashlytics.gradle)
+        classpath(libs.objectbox.gradle.plugin)
     }
 }
 
@@ -28,7 +28,10 @@ allprojects {
         jcenter()
         mavenCentral()
         maven {
-            url = java.net.URI(com.mxt.anitrend.buildsrc.Libraries.Repositories.jitPack)
+            setUrl("https://www.jitpack.io")
+        }
+        maven {
+            setUrl("https://oss.sonatype.org/content/repositories/snapshots")
         }
     }
 }

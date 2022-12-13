@@ -18,7 +18,6 @@
 package com.mxt.anitrend.buildsrc.componets
 
 import org.gradle.api.Project
-import com.mxt.anitrend.buildsrc.Libraries
 import com.mxt.anitrend.buildsrc.extensions.*
 
 internal fun Project.configureDependencies() {
@@ -29,107 +28,106 @@ internal fun Project.configureDependencies() {
         }
     )
 
-    dependencies.implementation(Libraries.JetBrains.Kotlin.stdlib)
-    dependencies.implementation(Libraries.JetBrains.Kotlin.reflect)
-    dependencies.implementation(Libraries.JetBrains.KotlinX.Serialization.json)
-    dependencies.implementation(Libraries.JetBrains.KotlinX.Coroutines.android)
-    dependencies.implementation(Libraries.JetBrains.KotlinX.Coroutines.core)
-    dependencies.testImplementation(Libraries.JetBrains.KotlinX.Coroutines.test)
+    dependencies.implementation(library("jetbrains-kotlin-stdlib-jdk8"))
+    dependencies.implementation(library("jetbrains-kotlin-reflect"))
+    dependencies.implementation(library("jetbrains-kotlinx-coroutines-core"))
+    dependencies.implementation(library("jetbrains-kotlinx-coroutines-android"))
+    dependencies.implementation(library("jetbrains-kotlinx-serialization-json"))
+    dependencies.testImplementation(library("jetbrains-kotlinx-coroutines-test"))
 
     /** Material Design */
-    dependencies.implementation(Libraries.Google.Material.material)
-    dependencies.implementation(Libraries.Google.FlexBox.flexBox)
-    dependencies.implementation(Libraries.Google.Firebase.Analytics.analyticsKtx)
-    dependencies.implementation(Libraries.Google.Firebase.Crashlytics.crashlytics)
+    dependencies.implementation(library("google-android-material"))
+    dependencies.implementation(library("google-android-flexbox"))
+    dependencies.implementation(library("google-firebase-analytics"))
+    dependencies.implementation(library("google-firebase-crashlytics"))
 
     /** Architecture Components */
-    dependencies.implementation(Libraries.AndroidX.ConstraintLayout.constraintLayout)
-    dependencies.implementation(Libraries.AndroidX.Collection.collectionKtx)
+    dependencies.implementation(library("androidx-constraintLayout"))
+    dependencies.implementation(library("androidx-collectionKtx"))
 
-    dependencies.implementation(Libraries.AndroidX.Core.coreKtx)
-    dependencies.implementation(Libraries.AndroidX.AppCompat.appcompat)
-    dependencies.implementation(Libraries.AndroidX.AppCompat.appcompatResources)
-    dependencies.implementation(Libraries.AndroidX.Activity.activityKtx)
-    dependencies.implementation(Libraries.AndroidX.Fragment.fragmentKtx)
-    dependencies.implementation(Libraries.AndroidX.Preference.preferenceKtx)
+    dependencies.implementation(library("androidx-coreKtx"))
+    dependencies.implementation(library("androidx-appcompat"))
+    dependencies.implementation(library("androidx-appcompat-resources"))
+    dependencies.implementation(library("androidx-activityKtx"))
+    dependencies.implementation(library("androidx-fragmentKtx"))
+    dependencies.implementation(library("androidx-preferenceKtx"))
 
-    dependencies.implementation(Libraries.AndroidX.Work.runtimeKtx)
-    dependencies.implementation(Libraries.AndroidX.Work.multiProcess)
-    dependencies.implementation(Libraries.AndroidX.StartUp.startUpRuntime)
+    dependencies.implementation(library("androidx-work-runtimeKtx"))
+    dependencies.implementation(library("androidx-startupRuntime"))
 
-    dependencies.implementation(Libraries.AndroidX.Lifecycle.liveDataCoreKtx)
-    dependencies.implementation(Libraries.AndroidX.Lifecycle.viewModelKtx)
-    dependencies.implementation(Libraries.AndroidX.Lifecycle.runTimeKtx)
-    dependencies.implementation(Libraries.AndroidX.Lifecycle.liveDataKtx)
-    dependencies.implementation(Libraries.AndroidX.Lifecycle.extensions)
+    dependencies.implementation(library("androidx-lifecycle-extensions"))
+    dependencies.implementation(library("androidx-lifecycle-runTimeKtx"))
+    dependencies.implementation(library("androidx-lifecycle-liveDataKtx"))
+    dependencies.implementation(library("androidx-lifecycle-viewModelKtx"))
+    dependencies.implementation(library("androidx-lifecycle-liveDataCoreKtx"))
 
     /** Koin AndroidX Dependency Injection */
-    dependencies.implementation (Libraries.Koin.core)
-    dependencies.implementation (Libraries.Koin.android)
-    dependencies.implementation (Libraries.Koin.AndroidX.workManager)
-    dependencies.testImplementation(Libraries.Koin.Test.test)
-    dependencies.androidTestImplementation(Libraries.Koin.Test.testJUnit4)
+    dependencies.implementation (library("koin-core"))
+    dependencies.implementation (library("koin-android"))
+    dependencies.implementation (library("koin-workManager"))
+    dependencies.testImplementation(library("koin-test"))
+    dependencies.testImplementation(library("koin-test-jUnit4"))
 
     /** Glide Libraries */
-    dependencies.implementation(Libraries.Glide.glide)
-    dependencies.kapt(Libraries.Glide.compiler)
+    dependencies.implementation(library("glide"))
+    dependencies.kapt(library("glide-compiler"))
 
     /** Retrofit Libraries */
-    dependencies.implementation(Libraries.Square.OkHttp.logging)
-    dependencies.implementation(Libraries.Square.Retrofit.retrofit)
-    dependencies.implementation(Libraries.Square.Retrofit.gsonConverter)
+    dependencies.implementation(library("square-logging"))
+    dependencies.implementation(library("square-retrofit"))
+    dependencies.implementation(library("square-converter-gson"))
 
     /** Rich Text Markdown Parser */
-    dependencies.implementation(Libraries.Markwon.core)
-    dependencies.implementation(Libraries.Markwon.editor)
-    dependencies.implementation(Libraries.Markwon.html)
-    dependencies.implementation(Libraries.Markwon.image)
-    dependencies.implementation(Libraries.Markwon.glide)
-    dependencies.implementation(Libraries.Markwon.parser)
-    dependencies.implementation(Libraries.Markwon.linkify)
-    dependencies.implementation(Libraries.Markwon.simpleExt)
-    dependencies.implementation(Libraries.Markwon.syntaxHighlight)
-    dependencies.implementation(Libraries.Markwon.Extension.taskList)
-    dependencies.implementation(Libraries.Markwon.Extension.strikeThrough)
-    dependencies.implementation(Libraries.Markwon.Extension.tables)
-    dependencies.implementation(Libraries.Markwon.Extension.latex)
-    dependencies.implementation(Libraries.betterLinkMovement)
+    dependencies.implementation(library("markwon-core"))
+    dependencies.implementation(library("markwon-editor"))
+    dependencies.implementation(library("markwon-html"))
+    dependencies.implementation(library("markwon-image"))
+    dependencies.implementation(library("markwon-glide"))
+    dependencies.implementation(library("markwon-parser"))
+    dependencies.implementation(library("markwon-linkify"))
+    dependencies.implementation(library("markwon-simpleExt"))
+    dependencies.implementation(library("markwon-syntaxHighlight"))
+    dependencies.implementation(library("markwon-ext-taskList"))
+    dependencies.implementation(library("markwon-ext-strikeThrough"))
+    dependencies.implementation(library("markwon-ext-tables"))
+    dependencies.implementation(library("markwon-ext-latex"))
+    dependencies.implementation(library("betterLinkMovement"))
 
     /** Object Box */
-    dependencies.implementation(Libraries.ObjectBox.android)
-    dependencies.kapt(Libraries.ObjectBox.processor)
+    dependencies.implementation(library("objectbox-android"))
+    dependencies.kapt(library("objectbox-processor"))
 
     /** Logging */
-    dependencies.implementation(Libraries.timber)
-    dependencies.implementation(Libraries.treessence)
+    dependencies.implementation(library("timber"))
+    dependencies.implementation(library("treessence"))
 
     /** AniTrend */
-    dependencies.implementation(Libraries.AniTrend.Emojify.emojify)
-    dependencies.implementation(Libraries.AniTrend.Markdown.markdown)
-    dependencies.implementation(Libraries.Square.Retrofit.xmlConverter) {
+    dependencies.implementation(library("anitrend-android-emoji"))
+    dependencies.implementation(library("anitrend-support-markwon"))
+    dependencies.implementation(library("square-converter-simplexml").get()) {
         exclude("xpp3", "xpp3")
         exclude("stax", "stax-api")
         exclude("stax", "stax")
     }
-    dependencies.implementation(Libraries.AniTrend.Retrofit.graphQL)
+    dependencies.implementation(library("anitrend-retrofit-graphql"))
 
     /** Smart Tab Layout */
-    dependencies.implementation(Libraries.SmartTab.layout)
-    dependencies.implementation(Libraries.SmartTab.utilities)
+    dependencies.implementation(library("smarttablayout-library"))
+    dependencies.implementation(library("smarttablayout-utils"))
 
     /** Testing-only dependencies */
-    dependencies.testImplementation(Libraries.junit)
-    dependencies.testImplementation(Libraries.hamcrest)
-    dependencies.testImplementation(Libraries.Mockito.core)
+    dependencies.testImplementation(library("junit"))
+    dependencies.testImplementation(library("hamcrest"))
+    dependencies.testImplementation(library("mockito-core"))
 
-    dependencies.androidTestImplementation(Libraries.CashApp.Turbine.turbine)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Test.coreKtx)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Test.rules)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Test.runner)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Fragment.test)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Test.Espresso.core)
-    dependencies.androidTestImplementation(Libraries.AndroidX.Test.Extension.junitKtx)
-    dependencies.androidTestImplementation(Libraries.Mockito.core)
-    dependencies.androidTestImplementation(Libraries.Mockito.android)
-    dependencies.androidTestImplementation(Libraries.mockk)
+    dependencies.androidTestImplementation(library("cash-turbine"))
+    dependencies.androidTestImplementation(library("androidx-test-coreKtx"))
+    dependencies.androidTestImplementation(library("androidx-test-runner"))
+    dependencies.androidTestImplementation(library("androidx-test-rules"))
+    dependencies.androidTestImplementation(library("androidx-fragment-test"))
+    dependencies.androidTestImplementation(library("androidx-test-espresso-core"))
+    dependencies.androidTestImplementation(library("androidx-junitKtx"))
+    dependencies.androidTestImplementation(library("mockito-core"))
+    dependencies.androidTestImplementation(library("mockk-android"))
+    dependencies.androidTestImplementation(library("mockk"))
 }

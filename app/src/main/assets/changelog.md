@@ -8,8 +8,6 @@ Read the **FAQ** for issues regarding NSFW and notifications. Goto **Options** -
 ### Enhancements
 - Improve notification experience @Luk1337
 
-
-
 ### Bug Fixes
 - Notification delivery on Android 12+. Thanks @Luk1337
 

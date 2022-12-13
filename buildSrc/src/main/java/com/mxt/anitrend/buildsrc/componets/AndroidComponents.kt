@@ -20,17 +20,15 @@ package com.mxt.anitrend.buildsrc.componets
 
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
-import com.android.build.gradle.internal.dsl.BuildType
 import com.android.build.api.dsl.ApplicationBuildType
 import com.android.build.gradle.internal.api.BaseVariantOutputImpl
 import com.mxt.anitrend.buildsrc.common.Configuration
 import com.mxt.anitrend.buildsrc.extensions.*
-import com.mxt.anitrend.buildsrc.Libraries
 import org.gradle.api.JavaVersion
 import org.gradle.api.NamedDomainObjectContainer
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.exclude
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompile
+import org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import java.io.File
 import java.io.FileWriter
@@ -139,7 +137,6 @@ private fun BaseAppModuleExtension.setUpWith(project: Project) {
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
-            isTestCoverageEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -152,7 +149,6 @@ private fun BaseAppModuleExtension.setUpWith(project: Project) {
 
         getByName("debug") {
             isMinifyEnabled = false
-            isTestCoverageEnabled = false
         }
 
         applyConfiguration(project)
@@ -214,9 +210,9 @@ internal fun Project.applyAndroidConfiguration() {
         exclude("org.jetbrains", "annotations-java5")
         resolutionStrategy.force(
             "com.google.code.findbugs:jsr305:3.0.2",
-            Libraries.Square.OkHttp.logging,
-            Libraries.Square.OkHttp.mockServer,
-            Libraries.Square.OkHttp.okhttp
+            library("square-okhttp"),
+            library("square-logging"),
+            library("square-mockServer")
         )
     }
 

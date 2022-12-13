@@ -20,8 +20,23 @@ package com.mxt.anitrend.buildsrc.extensions
 import com.android.build.gradle.BaseExtension
 import com.android.build.gradle.internal.dsl.BaseAppModuleExtension
 import org.gradle.api.Project
+import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.kotlin.gradle.internal.AndroidExtensionsExtension
+
+fun Project.versionCatalog() =
+    versionCatalogExtension()
+        .named("libs")
+
+fun Project.library(alias: String) =
+    versionCatalog()
+        .findLibrary(alias)
+        .get()
+
+fun Project.version(alias: String) =
+    versionCatalog()
+        .findVersion(alias)
+        .get()
 
 internal fun Project.baseExtension() =
     extensions.getByType<BaseExtension>()
@@ -37,6 +52,9 @@ internal fun Project.containsAndroidPlugin(): Boolean {
         plugin is BaseAppModuleExtension
     }
 }
+
+internal fun Project.versionCatalogExtension() =
+    extensions.getByType<VersionCatalogsExtension>()
 
 internal fun Project.runIfAppModule(body: BaseAppModuleExtension.() -> Unit) {
     if (containsAndroidPlugin())

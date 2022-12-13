@@ -1,43 +1,50 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.gradle.dsl.KotlinJvmCompile
-import java.net.URI
 
 plugins {
     `kotlin-dsl`
+    `version-catalog`
 }
 
 repositories {
     google()
     jcenter()
     mavenCentral()
+    gradlePluginPortal()
     maven {
-        url = URI("https://www.jitpack.io")
+        setUrl("https://plugins.gradle.org/m2/")
+    }
+    maven {
+        setUrl("https://www.jitpack.io")
     }
 }
 
-tasks.withType(KotlinJvmCompile::class.java) {
+tasks.withType(KotlinCompile::class) {
+    sourceCompatibility = "11"
+    targetCompatibility = "11"
+}
+
+tasks.withType(KotlinJvmCompile::class) {
     kotlinOptions {
         jvmTarget = "11"
     }
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
-val buildToolsVersion = "7.3.0"
-val kotlinVersion = "1.7.20"
-val manesVersion = "0.38.0"
+fun Project.library(alias: String) =
+    extensions.getByType<VersionCatalogsExtension>()
+        .named("libs")
+        .findLibrary(alias)
+        .get()
 
 dependencies {
     /* Depend on the android gradle plugin, since we want to access it in our plugin */
-    implementation("com.android.tools.build:gradle:$buildToolsVersion")
+    implementation(library("android-gradle-plugin"))
 
     /* Depend on the kotlin plugin, since we want to access it in our plugin */
-    implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+    implementation(library("jetbrains-kotlin-gradle"))
 
     /** Dependency management */
-    implementation("com.github.ben-manes:gradle-versions-plugin:$manesVersion")
+    implementation(library("gradle-versions"))
 
     /* Depend on the default Gradle API's since we want to build a custom plugin */
     implementation(gradleApi())
