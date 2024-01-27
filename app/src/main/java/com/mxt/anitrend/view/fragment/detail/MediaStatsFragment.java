@@ -1,12 +1,17 @@
 package com.mxt.anitrend.view.fragment.detail;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,6 +41,7 @@ import com.mxt.anitrend.presenter.fragment.MediaPresenter;
 import com.mxt.anitrend.util.ChartUtil;
 import com.mxt.anitrend.util.CompatUtil;
 import com.mxt.anitrend.util.KeyUtil;
+import com.mxt.anitrend.util.NotifyUtil;
 import com.mxt.anitrend.util.graphql.GraphUtil;
 import com.mxt.anitrend.util.media.MediaBrowseUtil;
 import com.mxt.anitrend.util.media.MediaUtil;
@@ -55,6 +61,7 @@ public class MediaStatsFragment extends FragmentBase<Media, MediaPresenter, Medi
 
     private FragmentSeriesStatsBinding binding;
     private Media model;
+    private ClipboardManager clipboardManager;
 
     private RankAdapter rankAdapter;
     private LinkAdapter linkAdapter;
@@ -75,6 +82,7 @@ public class MediaStatsFragment extends FragmentBase<Media, MediaPresenter, Medi
             mediaId = getArguments().getLong(KeyUtil.arg_id);
             mediaType = getArguments().getString(KeyUtil.arg_mediaType);
         }
+        clipboardManager = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         isMenuDisabled = true; mColumnSize = R.integer.grid_list_x2;
         setPresenter(new MediaPresenter(getContext()));
         setViewModel(true);
@@ -165,7 +173,11 @@ public class MediaStatsFragment extends FragmentBase<Media, MediaPresenter, Medi
 
                 @Override
                 public void onItemLongClick(View target, IntPair<ExternalLink> data) {
-
+                    clipboardManager.setPrimaryClip(ClipData.newPlainText("", data.getSecond().getUrl()));
+                    if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+                        // Android 13 shows a clipboard editor overlay, thus we don't need a toast msg for it.
+                        NotifyUtil.INSTANCE.makeText(getContext(), R.string.text_url_copied_to_clipboard, Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }

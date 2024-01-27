@@ -334,6 +334,8 @@
 
     <string name="text_confirm_exit">Pressione voltar novamente para sair do aplicativo</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">Aplicando Alterações..</string>
 
     <string name="text_filter_restriction">Filtros não aplicáveis nesta página</string>

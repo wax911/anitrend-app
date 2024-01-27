@@ -338,6 +338,8 @@
 
     <string name="text_confirm_exit">Naciśnij ponownie, aby zamknąć aplikację</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">Stosowanie zmian…</string>
 
     <string name="text_filter_restriction">Filtry nie mają zastosowania na tej stronie</string>

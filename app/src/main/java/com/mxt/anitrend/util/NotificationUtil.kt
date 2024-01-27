@@ -102,7 +102,10 @@ class NotificationUtil(
                     builder.append(context.getString(R.string.notification_episode,
                         notification.episode.toString(), notification.media?.title?.userPreferred))
                 }
-                KeyUtil.RELATED_MEDIA_ADDITION -> {
+                KeyUtil.RELATED_MEDIA_ADDITION,
+                KeyUtil.MEDIA_DATA_CHANGE,
+                KeyUtil.MEDIA_MERGE,
+                KeyUtil.MEDIA_DELETION -> {
                     builder.bold {
                         builder.append(notification.media?.title?.userPreferred)
                     }

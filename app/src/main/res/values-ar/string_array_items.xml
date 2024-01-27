@@ -10,7 +10,8 @@
     <string name="seasons_title_summer">الصيف</string>
     <string name="seasons_title_fall">الخريف</string>
 
-    <string name="trending_title_being_watched">تجري مشاهدته</string>
+    <string name="trending_title_anime">trending anime</string>
+    <string name="trending_title_manga">trending manga</string>
     <string name="trending_title_recently_added">اضيف مؤخرًا</string>
 
     <string name="airing_title_anime">قيد العرض</string>

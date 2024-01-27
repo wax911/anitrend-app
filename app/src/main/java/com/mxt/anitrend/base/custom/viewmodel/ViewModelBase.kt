@@ -48,7 +48,7 @@ class ViewModelBase<T>: ViewModel(), RetroCallback<T> {
      */
     fun requestData(@KeyUtil.RequestType request_type: Int, context: Context) {
         mLoader = RequestHandler(params, this, request_type)
-        mLoader?.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, context)
+        mLoader?.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR, context)
     }
 
     /**

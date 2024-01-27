@@ -340,6 +340,8 @@ elementos de tus favoritos al presionar en el icono del corazón .
 
     <string name="text_confirm_exit">Presiona nuevamente para salir de la app</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">Aplicando cambios...</string>
 
     <string name="text_filter_restriction">Los filtros no pueden ser aplicados en esta página</string>

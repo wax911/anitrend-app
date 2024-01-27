@@ -15,7 +15,7 @@ public interface KeyUtil {
     float AspectRatio = 1.37f;
     float WideAspectRatio = 0.95f;
     float PEEK_HEIGHT = 200f;
-    int PAGING_LIMIT = 42, GLIDE_REQUEST_TIMEOUT = 10000, SINGLE_ITEM_LIMIT = 1;
+    int PAGING_LIMIT = 21, GLIDE_REQUEST_TIMEOUT = 10000, SINGLE_ITEM_LIMIT = 1;
 
     /** Notification Actions */
     String NOTIFICATION_ID = "anitrend_notification_id";

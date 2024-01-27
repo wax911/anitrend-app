@@ -342,6 +342,8 @@
 
     <string name="text_confirm_exit">Press back again to exit the app</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">Applying Changes..</string>
 
     <string name="text_filter_restriction">Filters not applicable on this page</string>

@@ -11,7 +11,7 @@ updates:
   reviewers:
   - wax911
   labels:
-  - enhancement
+  - dependencies
   ignore:
   - dependency-name: com.afollestad.material-dialogs:core
     versions:

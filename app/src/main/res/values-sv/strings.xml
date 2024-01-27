@@ -337,6 +337,8 @@
 
     <string name="text_confirm_exit">Tryck tillbaka igen för att lämna appen</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">Använda ändringar...</string>
 
     <string name="text_filter_restriction">Filter som inte är tillämpliga på den här sidan</string>

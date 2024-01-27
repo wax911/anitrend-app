@@ -311,6 +311,7 @@ Another message using a bit of html the p tags represent new paragraphs -->
     <string name="text_permission_write">"AniTrend benötigt die Erlaubnis, Dateien in das Downloadverzeichnis zu speichern. Fortfahren?"</string>
     <string name="init_youtube_missing">"Um sich Trailer anzuschauen, benötigst du die YouTube App!"</string>
     <string name="text_confirm_exit">"Tippe erneut, um die App zu beenden"</string>
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
     <string name="text_filter_applying">"Änderungen anwenden.."</string>
     <string name="text_filter_restriction">"Filter sind auf dieser Seite nicht verfügbar"</string>
     <string name="text_quality_changed">"Qualität der Liste wurde verändert!"</string>

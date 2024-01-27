@@ -296,7 +296,7 @@ class Settings(
         }
 
     val isUpdated: Boolean
-        get() = versionCode < BuildConfig.VERSION_CODE
+        get() = versionCode < BuildConfig.versionCode
 
     var versionCode: Int = 1
         get() = getInt(_versionCode, 1)
@@ -366,7 +366,7 @@ class Settings(
 
     fun setUpdated() {
         edit {
-            putInt(_versionCode, BuildConfig.VERSION_CODE)
+            putInt(_versionCode, BuildConfig.versionCode)
         }
     }
 

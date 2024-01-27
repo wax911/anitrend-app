@@ -10,7 +10,8 @@
     <string name="seasons_title_summer">sommar</string>
     <string name="seasons_title_fall">höst</string>
 
-    <string name="trending_title_being_watched">tittas på</string>
+    <string name="trending_title_anime">trending anime</string>
+    <string name="trending_title_manga">trending manga</string>
     <string name="trending_title_recently_added">nyligen tillagd</string>
 
     <string name="airing_title_anime">vädring anime</string>

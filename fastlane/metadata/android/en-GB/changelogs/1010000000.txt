@@ -1,0 +1,3 @@
+🪶 Manga section under "What's Trending"
+🪶 Long press to copy links from media stats links
+🐛 Improve notification support for Android 12+

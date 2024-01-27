@@ -10,7 +10,8 @@
     <string name="seasons_title_summer">summer</string>
     <string name="seasons_title_fall">fall</string>
 
-    <string name="trending_title_being_watched">being watched</string>
+    <string name="trending_title_anime">trending anime</string>
+    <string name="trending_title_manga">trending manga</string>
     <string name="trending_title_recently_added">recently added</string>
 
     <string name="airing_title_anime">airing anime</string>

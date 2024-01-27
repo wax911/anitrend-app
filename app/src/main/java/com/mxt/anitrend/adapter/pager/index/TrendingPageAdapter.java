@@ -36,6 +36,10 @@ public class TrendingPageAdapter extends BaseStatePageAdapter {
                         .putVariable(KeyUtil.arg_sort, KeyUtil.TRENDING + KeyUtil.DESC));
             case 1:
                 return MediaLatestList.newInstance(getParams(), GraphUtil.INSTANCE.getDefaultQuery(true)
+                        .putVariable(KeyUtil.arg_mediaType, KeyUtil.MANGA)
+                        .putVariable(KeyUtil.arg_sort, KeyUtil.TRENDING + KeyUtil.DESC));
+            case 2:
+                return MediaLatestList.newInstance(getParams(), GraphUtil.INSTANCE.getDefaultQuery(true)
                         .putVariable(KeyUtil.arg_mediaType, KeyUtil.ANIME)
                         .putVariable(KeyUtil.arg_sort, KeyUtil.ID + KeyUtil.DESC));
         }

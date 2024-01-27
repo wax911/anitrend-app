@@ -10,27 +10,36 @@
       "properties": [
         {
           "id": "1:6612669674072061327",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 1
         },
         {
           "id": "2:2733567043137746921",
-          "name": "access_token"
+          "name": "access_token",
+          "type": 9
         },
         {
           "id": "3:2838583031471733336",
-          "name": "token_type"
+          "name": "token_type",
+          "type": 9
         },
         {
           "id": "4:8458183933749551269",
-          "name": "expires_in"
+          "name": "expires_in",
+          "type": 6,
+          "flags": 4
         },
         {
           "id": "6:520616083576039591",
-          "name": "refresh_token"
+          "name": "refresh_token",
+          "type": 9
         },
         {
           "id": "7:1143516165755284576",
-          "name": "expires"
+          "name": "expires",
+          "type": 6,
+          "flags": 4
         }
       ],
       "relations": []
@@ -42,16 +51,22 @@
       "properties": [
         {
           "id": "1:8192094427609094672",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 1
         },
         {
           "id": "2:5223378271763646860",
+          "name": "genre",
           "indexId": "7:6282494569266013241",
-          "name": "genre"
+          "type": 9,
+          "flags": 2048
         },
         {
           "id": "3:1160297997131312538",
-          "name": "isSelected"
+          "name": "isSelected",
+          "type": 1,
+          "flags": 4
         }
       ],
       "relations": []
@@ -63,48 +78,63 @@
       "properties": [
         {
           "id": "1:3660323350545802053",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 129
         },
         {
           "id": "5:9215005194933066458",
-          "name": "about"
+          "name": "about",
+          "type": 9
         },
         {
           "id": "18:2762246247394428289",
-          "name": "stats"
+          "name": "stats",
+          "type": 9
         },
         {
           "id": "21:5041274430707398865",
+          "name": "name",
           "indexId": "6:6024518364644181436",
-          "name": "name"
+          "type": 9,
+          "flags": 2048
         },
         {
           "id": "22:5781596125263231708",
-          "name": "avatar"
+          "name": "avatar",
+          "type": 9
         },
         {
           "id": "23:690360769209032882",
-          "name": "bannerImage"
+          "name": "bannerImage",
+          "type": 9
         },
         {
           "id": "24:1858540023180534388",
-          "name": "isFollowing"
+          "name": "isFollowing",
+          "type": 1,
+          "flags": 4
         },
         {
           "id": "25:5383243857227441317",
-          "name": "options"
+          "name": "options",
+          "type": 9
         },
         {
           "id": "26:4020595331140300272",
-          "name": "mediaListOptions"
+          "name": "mediaListOptions",
+          "type": 9
         },
         {
           "id": "27:684903496913852672",
-          "name": "unreadNotificationCount"
+          "name": "unreadNotificationCount",
+          "type": 5,
+          "flags": 4
         },
         {
           "id": "28:6177613386273186625",
-          "name": "statistics"
+          "name": "statistics",
+          "type": 9
         }
       ],
       "relations": []
@@ -116,24 +146,32 @@
       "properties": [
         {
           "id": "1:2006313869425720704",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 129
         },
         {
           "id": "5:2632131380848424212",
+          "name": "name",
           "indexId": "5:3205768986171629337",
-          "name": "name"
+          "type": 9,
+          "flags": 2048
         },
         {
           "id": "6:4735933401022837652",
-          "name": "avatar"
+          "name": "avatar",
+          "type": 9
         },
         {
           "id": "7:2136861380016388959",
-          "name": "bannerImage"
+          "name": "bannerImage",
+          "type": 9
         },
         {
           "id": "8:8366827496583421894",
-          "name": "isFollowing"
+          "name": "isFollowing",
+          "type": 1,
+          "flags": 4
         }
       ],
       "relations": []
@@ -145,15 +183,19 @@
       "properties": [
         {
           "id": "1:6379225855855596637",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 1
         },
         {
           "id": "2:7390999215278658722",
-          "name": "code"
+          "name": "code",
+          "type": 9
         },
         {
           "id": "3:6737271375218349861",
-          "name": "refresh_code"
+          "name": "refresh_code",
+          "type": 9
         }
       ],
       "relations": []
@@ -165,27 +207,36 @@
       "properties": [
         {
           "id": "1:4919308542398892925",
-          "name": "code"
+          "name": "code",
+          "type": 6,
+          "flags": 129
         },
         {
           "id": "2:4206201622027696500",
-          "name": "lastChecked"
+          "name": "lastChecked",
+          "type": 6,
+          "flags": 4
         },
         {
           "id": "3:747812924135221909",
-          "name": "migration"
+          "name": "migration",
+          "type": 1,
+          "flags": 4
         },
         {
           "id": "4:4272582652693764816",
-          "name": "releaseNotes"
+          "name": "releaseNotes",
+          "type": 9
         },
         {
           "id": "5:8936918284087833209",
-          "name": "version"
+          "name": "version",
+          "type": 9
         },
         {
           "id": "6:7466324967802281047",
-          "name": "appId"
+          "name": "appId",
+          "type": 9
         }
       ],
       "relations": []
@@ -197,39 +248,54 @@
       "properties": [
         {
           "id": "1:1373562080119474123",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 129
         },
         {
           "id": "2:6907444126753766332",
-          "name": "name"
+          "name": "name",
+          "type": 9
         },
         {
           "id": "3:2751315384469549484",
-          "name": "description"
+          "name": "description",
+          "type": 9
         },
         {
           "id": "4:5197343920864371609",
-          "name": "category"
+          "name": "category",
+          "type": 9
         },
         {
           "id": "5:7994323065304181996",
-          "name": "rank"
+          "name": "rank",
+          "type": 5,
+          "flags": 4
         },
         {
           "id": "6:4564770699891438322",
-          "name": "isGeneralSpoiler"
+          "name": "isGeneralSpoiler",
+          "type": 1,
+          "flags": 4
         },
         {
           "id": "7:3519745263526284275",
-          "name": "isMediaSpoiler"
+          "name": "isMediaSpoiler",
+          "type": 1,
+          "flags": 4
         },
         {
           "id": "8:5813864838197118284",
-          "name": "isAdult"
+          "name": "isAdult",
+          "type": 1,
+          "flags": 4
         },
         {
           "id": "9:1394444690792123339",
-          "name": "isSelected"
+          "name": "isSelected",
+          "type": 1,
+          "flags": 4
         }
       ],
       "relations": []
@@ -241,11 +307,15 @@
       "properties": [
         {
           "id": "1:4804620542627180351",
-          "name": "id"
+          "name": "id",
+          "type": 6,
+          "flags": 129
         },
         {
           "id": "3:3919880449308635608",
-          "name": "read"
+          "name": "read",
+          "type": 1,
+          "flags": 4
         }
       ],
       "relations": []
@@ -255,8 +325,8 @@
   "lastIndexId": "9:616734031870725147",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
-  "modelVersion": 4,
-  "modelVersionParserMinimum": 4,
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
   "retiredEntityUids": [
     7041436970200890383,
     7236786735527181723,

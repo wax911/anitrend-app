@@ -29,7 +29,7 @@ class MigrationUtil private constructor(
             IntRange(
                     migration.startVersion,
                     migration.endVersion
-            ).contains(BuildConfig.VERSION_CODE)
+            ).contains(BuildConfig.versionCode)
         }
 
         return minMigrations + maxMigrations
@@ -40,7 +40,7 @@ class MigrationUtil private constructor(
      */
     override fun applyMigration(): Boolean {
         if (settings.isUpdated) {
-            Timber.d("Application has been updated: from ${settings.versionCode} - ${BuildConfig.VERSION_CODE}, checking for migration scripts")
+            Timber.d("Application has been updated: from ${settings.versionCode} - ${BuildConfig.versionCode}, checking for migration scripts")
             val strategies= getMigrationStrategies()
             if (strategies.isNotEmpty())
                 return try {

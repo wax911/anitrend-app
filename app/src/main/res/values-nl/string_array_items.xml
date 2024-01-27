@@ -10,7 +10,8 @@
     <string name="seasons_title_summer">zomer</string>
     <string name="seasons_title_fall">herfst</string>
 
-    <string name="trending_title_being_watched">worden bekeken</string>
+    <string name="trending_title_anime">trending anime</string>
+    <string name="trending_title_manga">trending manga</string>
     <string name="trending_title_recently_added">recentelijk toegevoegd</string>
 
     <string name="airing_title_anime">opkomende afleveringen</string>

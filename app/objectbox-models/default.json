@@ -27,8 +27,7 @@
         {
           "id": "4:8458183933749551269",
           "name": "expires_in",
-          "type": 6,
-          "flags": 4
+          "type": 6
         },
         {
           "id": "6:520616083576039591",
@@ -38,8 +37,7 @@
         {
           "id": "7:1143516165755284576",
           "name": "expires",
-          "type": 6,
-          "flags": 4
+          "type": 6
         }
       ],
       "relations": []
@@ -65,8 +63,7 @@
         {
           "id": "3:1160297997131312538",
           "name": "isSelected",
-          "type": 1,
-          "flags": 4
+          "type": 1
         }
       ],
       "relations": []
@@ -112,8 +109,7 @@
         {
           "id": "24:1858540023180534388",
           "name": "isFollowing",
-          "type": 1,
-          "flags": 4
+          "type": 1
         },
         {
           "id": "25:5383243857227441317",
@@ -128,8 +124,7 @@
         {
           "id": "27:684903496913852672",
           "name": "unreadNotificationCount",
-          "type": 5,
-          "flags": 4
+          "type": 5
         },
         {
           "id": "28:6177613386273186625",
@@ -170,8 +165,7 @@
         {
           "id": "8:8366827496583421894",
           "name": "isFollowing",
-          "type": 1,
-          "flags": 4
+          "type": 1
         }
       ],
       "relations": []
@@ -214,14 +208,12 @@
         {
           "id": "2:4206201622027696500",
           "name": "lastChecked",
-          "type": 6,
-          "flags": 4
+          "type": 6
         },
         {
           "id": "3:747812924135221909",
           "name": "migration",
-          "type": 1,
-          "flags": 4
+          "type": 1
         },
         {
           "id": "4:4272582652693764816",
@@ -270,32 +262,27 @@
         {
           "id": "5:7994323065304181996",
           "name": "rank",
-          "type": 5,
-          "flags": 4
+          "type": 5
         },
         {
           "id": "6:4564770699891438322",
           "name": "isGeneralSpoiler",
-          "type": 1,
-          "flags": 4
+          "type": 1
         },
         {
           "id": "7:3519745263526284275",
           "name": "isMediaSpoiler",
-          "type": 1,
-          "flags": 4
+          "type": 1
         },
         {
           "id": "8:5813864838197118284",
           "name": "isAdult",
-          "type": 1,
-          "flags": 4
+          "type": 1
         },
         {
           "id": "9:1394444690792123339",
           "name": "isSelected",
-          "type": 1,
-          "flags": 4
+          "type": 1
         }
       ],
       "relations": []
@@ -314,8 +301,7 @@
         {
           "id": "3:3919880449308635608",
           "name": "read",
-          "type": 1,
-          "flags": 4
+          "type": 1
         }
       ],
       "relations": []

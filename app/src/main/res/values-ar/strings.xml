@@ -342,6 +342,8 @@
 
     <string name="text_confirm_exit">اضغط على زر العودة مرة اخرى للخروج من التطبيق</string>
 
+    <string name="text_url_copied_to_clipboard">Copied URL to clipboard</string>
+
     <string name="text_filter_applying">جارٍ تطبيق التعديلات..</string>
 
     <string name="text_filter_restriction">لايمكن استخدام الفلاتر في هذه الصفحة</string>

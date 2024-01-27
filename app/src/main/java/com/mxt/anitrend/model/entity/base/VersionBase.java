@@ -97,7 +97,7 @@ public class VersionBase implements Parcelable {
     }
 
     public boolean isNewerVersion() {
-        return code > BuildConfig.VERSION_CODE;
+        return code > BuildConfig.versionCode;
     }
 
     public void setCode(long code) {

@@ -18,7 +18,8 @@
 
     <!--Try to keep all titles short-->
     <string-array name="trending_title">
-        <item>@string/trending_title_being_watched</item>
+        <item>@string/trending_title_anime</item>
+        <item>@string/trending_title_manga</item>
         <item>@string/trending_title_recently_added</item>
     </string-array>
 

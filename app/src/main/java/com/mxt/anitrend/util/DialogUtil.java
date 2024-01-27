@@ -226,7 +226,7 @@ public class DialogUtil {
                     .build();
 
             SingleLineTextView singleLineTextView = (SingleLineTextView) materialDialog.findViewById(R.id.changelog_version);
-            singleLineTextView.setText(String.format("v%s", BuildConfig.VERSION_NAME));
+            singleLineTextView.setText(String.format("v%s", BuildConfig.versionName));
 
             AssetManager assetManager = context.getAssets();
             InputStream inputStream = assetManager.open("changelog.md");

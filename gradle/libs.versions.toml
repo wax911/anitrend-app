@@ -1,29 +1,29 @@
 [versions]
 ktlint = "0.40.0"
 
-gradle-plugin = "7.3.1"
+gradle-plugin = "7.4.2"
 
 androidx-appcompat = "1.6.0-rc01"
-androidx-core = "1.9.0"
+androidx-core = "1.10.1"
 androidx-constraintlayout = "2.1.4"
-androidx-fragment = "1.5.3"
-androix-lifecycle = "2.5.1"
+androidx-fragment = "1.6.2"
+androix-lifecycle = "2.6.2"
 androidx-paging = "2.1.2"
-androidx-preference = "1.2.0"
+androidx-preference = "1.2.1"
 androidx-test = "1.5.0"
-androidx-test-ext = "1.1.4"
+androidx-test-ext = "1.1.5"
 androidx-work = "2.7.1"
 
-bumptech-glide = "4.12.0"
+bumptech-glide = "4.15.1"
 
 io-koin = "3.2.0"
-io-objectbox = "2.9.1"
-io-mockk = "1.13.2"
+io-objectbox = "3.7.1"
+io-mockk = "1.13.9"
 
 jetbrains-dokka = "1.7.20"
 jetbrains-kotlin = "1.7.21"
-jetbrains-kotlinx-coroutines = "1.6.4"
-jetbrains-kotlinx-serialization = "1.1.0"
+jetbrains-kotlinx-coroutines = "1.7.3"
+jetbrains-kotlinx-serialization = "1.5.1"
 
 noties-markwon = "4.6.2"
 org-mockito = "3.9.0"
@@ -58,18 +58,18 @@ betterLinkMovement = "me.saket:better-link-movement-method:2.2.0"
 hamcrest = "org.hamcrest:hamcrest-library:2.2"
 junit = "junit:junit:4.13.2"
 prettyTime = "org.ocpsoft.prettytime:prettytime:4.0.4.Final"
-threeTenBp = "com.jakewharton.threetenabp:threetenabp:1.4.3"
+threeTenBp = "com.jakewharton.threetenabp:threetenabp:1.4.6"
 treessence = "com.github.bastienpaulfr:Treessence:1.0.4"
 timber = "com.jakewharton.timber:timber:5.0.1"
 
 android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "gradle-plugin" }
 
-androidx-activityKtx = "androidx.activity:activity-ktx:1.6.0"
+androidx-activityKtx = "androidx.activity:activity-ktx:1.7.2"
 
 androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
 androidx-appcompat-resources = { module = "androidx.appcompat:appcompat-resources", version.ref = "androidx-appcompat" }
 
-androidx-collectionKtx = "androidx.collection:collection-ktx:1.2.0"
+androidx-collectionKtx = "androidx.collection:collection-ktx:1.3.0"
 
 androidx-coreKtx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
 
@@ -95,7 +95,7 @@ androidx-test-coreKtx = { module = "androidx.test:core-ktx", version.ref = "andr
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidx-test" }
 androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidx-test" }
 
-androidx-test-espresso-core = "androidx.test.espresso:espresso-core:3.4.0"
+androidx-test-espresso-core = "androidx.test.espresso:espresso-core:3.5.1"
 
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-ext" }
 androidx-junitKtx = { module = "androidx.test.ext:junit-ktx", version.ref = "androidx-test-ext" }
@@ -108,18 +108,18 @@ anitrend-android-emoji = "com.github.anitrend:android-emojify:1.6.0-beta01"
 anitrend-support-markwon = "com.github.AniTrend:support-markdown:0.12.1-alpha01"
 anitrend-retrofit-graphql = "com.github.anitrend:retrofit-graphql:cf428d8430"
 
-cash-turbine = "app.cash.turbine:turbine:0.12.1"
+cash-turbine = "app.cash.turbine:turbine:1.0.0"
 
-google-firebase-core = "com.google.firebase:firebase-core:17.4.4"
-google-firebase-analytics = "com.google.firebase:firebase-analytics-ktx:18.0.2"
-google-firebase-crashlytics = "com.google.firebase:firebase-crashlytics:18.2.11"
-google-firebase-crashlytics-gradle = "com.google.firebase:firebase-crashlytics-gradle:2.9.1"
+google-firebase-core = "com.google.firebase:firebase-core:21.1.1"
+google-firebase-analytics = "com.google.firebase:firebase-analytics-ktx:21.3.0"
+google-firebase-crashlytics = "com.google.firebase:firebase-crashlytics:18.6.1"
+google-firebase-crashlytics-gradle = "com.google.firebase:firebase-crashlytics-gradle:2.9.9"
 
 google-android-flexbox = "com.google.android:flexbox:2.0.1"
 
-google-android-material = "com.google.android.material:material:1.7.0"
+google-android-material = "com.google.android.material:material:1.9.0"
 
-google-gsm-google-services = "com.google.gms:google-services:4.3.13"
+google-gsm-google-services = "com.google.gms:google-services:4.4.0"
 
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "bumptech-glide" }
 glide-compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "bumptech-glide" }

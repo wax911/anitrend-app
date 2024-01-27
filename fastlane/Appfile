@@ -1,0 +1,2 @@
+json_key_file("./app/src/release/playstore-service-account.json") # Path to the json secret file - Follow https://docs.fastlane.tools/actions/supply/#setup to get one
+package_name("com.mxt.anitrend") # e.g. com.krausefx.app

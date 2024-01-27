@@ -1,0 +1,44 @@
+name: version-updater
+on:
+  repository_dispatch:
+    types: [version-updater]
+
+jobs:
+  version-updater:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Extract version
+        id: version
+        run: echo "${GITHUB_REF#refs/tags/}" > VERSION
+
+      - name: Calculate version code
+        id: code
+        run: |
+          IFS='.' read -ra VER <<< "$(cat VERSION)"
+          MAJOR=$((VER[0] * 1000000000))
+          MINOR=$((VER[1] * 10000))
+          PATCH=${VER[2]}
+          CODE=$((MAJOR + MINOR + PATCH))
+          echo "version=$(cat VERSION)" > gradle/version.properties
+          echo "code=$CODE" >> gradle/version.properties
+          echo "name=v$(cat VERSION)" >> gradle/version.properties
+
+      - name: Show release info
+        run: cat gradle/version.properties
+
+      - name: Commit version.properties
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add gradle/version.properties
+          git commit -m "Bump version to $(cat VERSION)"
+        
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: develop
+          directory: .

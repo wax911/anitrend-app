@@ -64,7 +64,7 @@ class LoggingActivity : ActivityBase<Void, BasePresenter>(), CoroutineScope by M
         super.onPostCreate(savedInstanceState)
         applicationVersionTextView.text = getString(
                 R.string.text_about_application_version,
-                BuildConfig.VERSION_NAME
+                BuildConfig.versionName
         )
     }
 

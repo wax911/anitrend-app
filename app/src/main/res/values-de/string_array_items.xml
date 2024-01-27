@@ -7,7 +7,8 @@
     <string name="seasons_title_spring">Frühling</string>
     <string name="seasons_title_summer">Sommer</string>
     <string name="seasons_title_fall">Herbst</string>
-    <string name="trending_title_being_watched">Momentan Beliebt</string>
+    <string name="trending_title_anime">trending anime</string>
+    <string name="trending_title_manga">trending manga</string>
     <string name="trending_title_recently_added">Kürzlich Hinzugefügt</string>
     <string name="airing_title_anime">Laufende Anime</string>
     <string name="airing_title_latest_episodes">Neueste Folgen</string>
