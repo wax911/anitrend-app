@@ -16,7 +16,8 @@ import timber.log.Timber
 import java.net.URL
 
 internal class GlideImagePlugin private constructor(
-    private val requestManager: RequestManager
+    private val requestManager: RequestManager,
+    private val agent: String
 ) : GlideImagesPlugin.GlideStore {
 
     private val requestListener = object : RequestListener<Drawable> {
@@ -45,20 +46,20 @@ internal class GlideImagePlugin private constructor(
     }
 
     override fun load(drawable: AsyncDrawable): RequestBuilder<Drawable> {
-        val headers = LazyHeaders.Builder()
+        val headerBuilder = LazyHeaders.Builder()
 
         val url = runCatching {
             URL(drawable.destination)
         }.getOrNull()
 
-        when (url?.host) {
-            "files.catbox.moe" ->
-                headers.addHeader("User-Agent", USER_AGENT_FEDORA)
-        }
+        val model = runCatching {
+            val headers =  headerBuilder.addHeader("User-Agent", agent).build()
+            GlideUrl(url, headers)
+        }.getOrNull()
 
         return requestManager.asDrawable()
             .addListener(requestListener)
-            .load(runCatching { GlideUrl(url, headers.build()) }.getOrNull())
+            .load(model)
             .override(720)
             .fitCenter()
     }
@@ -68,10 +69,7 @@ internal class GlideImagePlugin private constructor(
     }
 
     companion object {
-        fun create(requestManager: RequestManager) =
-            GlideImagePlugin(requestManager)
-
-        const val USER_AGENT_FEDORA =
-            "Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.49 Safari/537.36"
+        fun create(requestManager: RequestManager, agent: String) =
+            GlideImagePlugin(requestManager, agent)
     }
 }

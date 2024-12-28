@@ -57,6 +57,7 @@ import io.wax911.emojify.EmojiManager
 import io.wax911.emojify.serializer.gson.GsonDeserializer
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.workmanager.dsl.worker
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import timber.log.Timber
 
@@ -108,6 +109,12 @@ private val coreModule = module {
             serializer = GsonDeserializer()
         )
     }
+    single(
+        qualifier = named("ua"),
+        createdAtStart = true
+    ) {
+        WebSettings.getDefaultUserAgent(androidContext())
+    }
 }
 
 private val widgetModule = module {
@@ -132,7 +139,8 @@ private val widgetModule = module {
             .usePlugin(
                 GlideImagesPlugin.create(
                     GlideImagePlugin.create(
-                        Glide.with(get<Context>())
+                        Glide.with(get<Context>()),
+                        get(named("ua"))
                     )
                 )
             )
@@ -294,9 +302,9 @@ private val networkModule = module {
                 .create()
         )
     }
-    single(createdAtStart = true) {
+    single {
         ClientInterceptor(
-            agent = WebSettings.getDefaultUserAgent(androidContext())
+            agent = get(named("ua"))
         )
     }
 }
